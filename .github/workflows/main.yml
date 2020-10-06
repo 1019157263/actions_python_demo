@@ -1,4 +1,4 @@
-name: 'Baidu Tieba Auto Sign'
+name: 'python_demo'
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
     - cron: '5 16,22 * * *'
 
 jobs:
-  tieba_sign:
+  python_test:
     runs-on: ubuntu-latest
     steps:
       - name: 'Checkout codes'
@@ -22,4 +22,5 @@ jobs:
       - name: 'Start Sign'
         env:
           BDUSS: ${{ secrets.BDUSS }}
+          TOKEN: ${{ secrets.TOKEN }}
         run: python main.py
