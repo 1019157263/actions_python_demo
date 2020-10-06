@@ -3,7 +3,9 @@ from email.mime.text import MIMEText
 import os,time
 su_old=24
 
-
+def get_token():
+	
+	return 666
 def faemeil(xxx='默认'):
 		subject = "贴吧签到通知"
 		content = f"<h4>{xxx}</h4>"  # 邮件内容
@@ -22,3 +24,4 @@ def faemeil(xxx='默认'):
 		    smtp.close()
 if __name__ == "__main__":
 	faemeil("github_actions_send_email")
+	print(666)
