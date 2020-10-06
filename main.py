@@ -10,7 +10,7 @@ def faemeil(xxx='默认'):
 		subject = "贴吧签到通知"
 		content = f"<h4>{xxx}</h4>"  # 邮件内容
 		sender = "18381801393@163.com"  # 发件人
-		password = 'NNKJXXRPAOGGLTMP'  # 刚才我们在163邮箱里设置的授权密码
+		password = os.environ['TOKEN']  # 刚才我们在163邮箱里设置的授权密码
 		receivers = ["1019157263@qq.com"]  # 收件人
 		for receiver in receivers:
 		    message = MIMEText(content, "html", "utf-8")
